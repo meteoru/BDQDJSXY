@@ -46,15 +46,83 @@
         }
 
         .main {
-            /*width: 1000px;*/
             margin-left: 5%;
             margin-right: 5%;
+        }
+        
+        h2 {
+            font: bold 1.2em arial, sans-serif;
+        }
+        
+        h3 {
+            font: bold 1em arial, sans-serif;
+            color: #aaa;
         }
 
         .article {
             background-color: #fff;
             margin: 20px 0px;
             padding: 20px 20px;
+        }
+        
+        .article ul, .article ol, .article table, .article span{
+            font-size: 0.8em;
+            font-family: arial, sans-serif;
+            line-height: 200%;
+        }
+        
+        span.author {
+            font-size: 0.7em;
+            font-family: arial, sans-serif;
+            color: #aaa;
+        }
+        
+        p{
+            text-indent: 2em;
+            font-size: 0.8em;
+            font-family: arial, sans-serif;
+            line-height: 200%;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        ul.picList li{
+            border: 1px #888 solid;
+            height: 160px;
+            width: 160px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        ul.picList li img {
+            height: 110px;
+            width: 120px;
+            margin-top: 10px;
+        }
+
+        .article table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .article table, .article tr, .article th, .article td {
+            border: 1px #aaa solid;
+        }
+        
+        .article th {
+            background-color: #535;
+            color: #fff;
+        }
+        
+        .article td {
+            font-size: 0.8em;
+        }
+        
+        .article tr.total {
+            background-color: #888;
+            font-weight: bold;
         }
 
         .right {
@@ -84,6 +152,10 @@
             float: right;
             width: 700px;
             text-align: left;
+        }
+        
+        .right .controls .tips {
+            color: #aaa;
         }
         
         .right .controls textarea {
@@ -134,12 +206,14 @@
                 <div class="article">
                     <h2>文章一级标题</h2>
                     <h3>文章二级标题</h3>
-                    <p>文章作者 文章发表时间</p>
+                    <span class="author">文章作者 文章发表时间</span>
                     <p>
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
-                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。<br />
-                        <img src="http://ww3.sinaimg.cn/bmiddle/78b9ecd7gw1f0cy88xx0kj20p011iado.jpg" alt="好看的图片" /><br />
+                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+                    </p>
+                    <img src="http://ww3.sinaimg.cn/bmiddle/78b9ecd7gw1f0cy88xx0kj20p011iado.jpg" alt="好看的图片" />
+                    <p>
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
                     </p>
@@ -147,20 +221,22 @@
                 <div class="article">
                     <h2>另一篇文章的一级标题</h2>
                     <h3>文章的二级标题</h3>
-                    <p>文章作者 文章发表时间</p>
+                    <span class="author">文章作者 文章发表时间</span>
                     <p>
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
                         这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br />
-                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。<br />
-                        <img src="http://ww3.sinaimg.cn/bmiddle/78b9ecd7gw1f0cy88xx0kj20p011iado.jpg" alt="好看的图片" />
+                        这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
                     </p>
+                    <img src="http://ww3.sinaimg.cn/bmiddle/78b9ecd7gw1f0cy88xx0kj20p011iado.jpg" alt="好看的图片" />
                     <ul>
                         <li>列表项目一</li>
                         <li>列表项目二</li>
                         <li>列表项目三</li>
                     </ul>
-                    <h3>图片</h3>
-                    <ul style="list-style: none">
+                </div>
+                <div class="article">
+                    <h2>图片</h2>
+                    <ul class="picList">
                         <li>
                             好看的图片<br />
                             <img src="http://ww3.sinaimg.cn/bmiddle/78b9ecd7gw1f0cy88xx0kj20p011iado.jpg" alt="好看的图片" />
@@ -206,13 +282,13 @@
                 <div class="article">
                     <h2>最后一篇文章一级标题</h2>
                     <h3>文章二级标题</h3>
-                    <p>文章作者 文章发表时间</p>
+                    <span class="author">文章作者 文章发表时间</span>
                     <ol>
                         <li>排名1</li>
                         <li>排名2</li>
                         <li>排名3</li>
                     </ol>
-                    下面是一个表格，给表格加了一个border="1"好让你看出是一个表格
+                    <span>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</span>
                     <table border="1">
                         <tr>
                             <th>表头</th>
@@ -239,7 +315,7 @@
                             <td>表内容单元格</td>
                             <td><a href="#">操作</a></td>
                         </tr>
-                        <tr>
+                        <tr class="total">
                             <td>总计</td>
                             <td colspan="2">1000</td>
                         </tr>
@@ -250,26 +326,26 @@
                 <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
                 <form action="#">
                     <div class="label">
-                        请输入邮箱地址<br /><br />
-                        请输入密码<br />
-                        请重复输入密码<br /><br />
-                        性别<br />
-                        城市<br/>
-                        爱好<br />
-                        个人描述<br />
+                        <label for="email">请输入邮箱地址</label><br /><br />
+                        <label for="pw">请输入密码</label><br />
+                        <label for="pwc">请重复输入密码</label><br /><br />
+                        <label for="sex">性别</label><br />
+                        <label for="city">城市</label><br/>
+                        <label for="hobby">爱好</label><br />
+                        <label for="description">个人描述</label><br />
                     </div>
                     <div class="controls">
-                        <input type="text" value="这是一个文本输入框" /><br />
-                        <span>邮箱地址请按要求输入格式</span><br />
-                        <input type="password" value="这是一个文本输入框" /><br />
-                        <input type="password" value="这是一个文本输入框" /><br />
-                        <span>密码请为6-16位英文数字</span><br />
+                        <input id="email" type="text" value="这是一个文本输入框" /><br />
+                        <span class="tips">邮箱地址请按要求输入格式</span><br />
+                        <input id="pw" type="password" value="这是一个文本输入框" /><br />
+                        <input id="pwc" type="password" value="这是一个文本输入框" /><br />
+                        <span class="tips">密码请为6-16位英文数字</span><br />
                         
                         <input type="radio" checked="checked" name="sex" value="male" />男
                         <input type="radio" name="sex" value="female" />女
                         <br />
 
-                        <select>
+                        <select id="city">
                             <option value="beijing">北京</option>
                             <option value="shanghai">上海</option>
                             <option value="guangzhou">广州</option>
@@ -282,7 +358,7 @@
                         <input type="checkbox" name="hobby" value="science" />科学
                         <br />
 
-                        <textarea>这是一个多行输入框，输入您的个人描述</textarea>
+                        <textarea id="description">这是一个多行输入框，输入您的个人描述</textarea>
                     </div>
                     <div class="sbBtn">
                         <input type="submit" value="确认提交" />
